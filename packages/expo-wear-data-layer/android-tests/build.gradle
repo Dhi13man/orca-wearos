@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.library' version '8.12.0'
+    id 'org.jetbrains.kotlin.android' version '2.2.20'
+}
+repositories { google(); mavenCentral() }
+android {
+    namespace 'expo.modules.orcawear.acceptance'
+    compileSdk 36
+    defaultConfig {
+        minSdk 31
+        targetSdk 36
+        testApplicationId 'dev.orca.wear.nativeacceptance'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    sourceSets.main.java.srcDirs = ['../android/src/main/java', '../../wear-companion-contract/android/src/main/kotlin']
+    sourceSets.androidTest.java.srcDirs = ['../android/src/androidTest/java']
+    sourceSets.androidTest.assets.srcDirs = ['../../wear-companion-contract/conformance']
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = '17' }
+}
+dependencies { androidTestImplementation 'androidx.test:runner:1.7.0' }

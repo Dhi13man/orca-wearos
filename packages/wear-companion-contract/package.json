@@ -1,0 +1,21 @@
+{
+  "name": "@orca/wear-companion-contract",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/action.ts",
+    "./dashboard": "./src/dashboard.ts",
+    "./host-page": "./src/host-page.ts",
+    "./usage-page": "./src/usage-page.ts",
+    "./agent-page": "./src/agent-page.ts",
+    "./conversation-page": "./src/conversation-page.ts",
+    "./notification-page": "./src/notification-page.ts",
+    "./receipt": "./src/receipt.ts",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-action-manifest.mjs && node scripts/generate-conformance-vectors.mjs",
+    "check:generated": "node scripts/generate-action-manifest.mjs --check && node scripts/generate-conformance-vectors.mjs --check"
+  }
+}

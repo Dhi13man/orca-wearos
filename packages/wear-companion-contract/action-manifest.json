@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "limits": {
+    "actionBytes": 8192,
+    "payloadBytes": 4096,
+    "idBytes": 256,
+    "messageBytes": 2048
+  },
+  "envelopeOrder": [
+    "schemaVersion",
+    "bindingId",
+    "requestId",
+    "expiresAt",
+    "action",
+    "target",
+    "publisherEpoch",
+    "expectedRevision",
+    "targetPublicationEpoch",
+    "targetSnapshotVersion",
+    "payload"
+  ],
+  "actions": {
+    "readHostPage": {
+      "target": {},
+      "payload": {
+        "cursor": "nullableId"
+      },
+      "sessionFenced": false
+    },
+    "readUsagePage": {
+      "target": {},
+      "payload": {
+        "cursor": "nullableId"
+      },
+      "sessionFenced": false
+    },
+    "readHostAgents": {
+      "target": {
+        "hostId": "id"
+      },
+      "payload": {
+        "cursor": "nullableId"
+      },
+      "sessionFenced": false
+    },
+    "readNotificationsPage": {
+      "target": {},
+      "payload": {
+        "cursor": "nullableId"
+      },
+      "sessionFenced": false
+    },
+    "openConversation": {
+      "target": {
+        "hostId": "id",
+        "workspaceId": "id",
+        "workspaceKind": ["worktree", "folder"],
+        "sessionTabId": "id"
+      },
+      "payload": {},
+      "sessionFenced": true
+    },
+    "renewConversation": {
+      "target": {
+        "hostId": "id",
+        "workspaceId": "id",
+        "workspaceKind": ["worktree", "folder"],
+        "sessionTabId": "id"
+      },
+      "payload": {
+        "leaseId": "id"
+      },
+      "sessionFenced": true
+    },
+    "closeConversation": {
+      "target": {
+        "hostId": "id",
+        "workspaceId": "id",
+        "workspaceKind": ["worktree", "folder"],
+        "sessionTabId": "id"
+      },
+      "payload": {
+        "leaseId": "id"
+      },
+      "sessionFenced": true
+    },
+    "sendAgentMessage": {
+      "target": {
+        "hostId": "id",
+        "workspaceId": "id",
+        "workspaceKind": ["worktree", "folder"],
+        "sessionTabId": "id"
+      },
+      "payload": {
+        "text": "message"
+      },
+      "sessionFenced": true
+    },
+    "requestPhoneHandoff": {
+      "target": {
+        "hostId": "id",
+        "workspaceId": "id",
+        "workspaceKind": ["worktree", "folder"],
+        "sessionTabId": "id"
+      },
+      "payload": {},
+      "sessionFenced": true
+    },
+    "refresh": {
+      "target": {},
+      "payload": {},
+      "sessionFenced": false
+    }
+  }
+}

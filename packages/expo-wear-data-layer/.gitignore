@@ -1,0 +1,9 @@
+!android/
+android/.gradle/
+android/build/
+jvm-tests/.gradle/
+jvm-tests/.kotlin/
+jvm-tests/build/
+android-tests/.gradle/
+android-tests/.kotlin/
+android-tests/build/

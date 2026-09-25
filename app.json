@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Orca Wear",
+    "slug": "orca-wear",
+    "version": "0.0.1",
+    "scheme": "orca",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "jsEngine": "hermes",
+    "android": {
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "com.stably.orca.mobile",
+      "usesCleartextTraffic": true,
+      "versionCode": 1
+    },
+    "plugins": [
+      "./plugins/with-wear-manifest.js",
+      "./plugins/with-wear-firebase.js",
+      ["@orca/expo-wear-data-layer", { "role": "watch" }],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "minSdkVersion": 33,
+            "targetSdkVersion": 36,
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-secure-store"
+    ]
+  }
+}

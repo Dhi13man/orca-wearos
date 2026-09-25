@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a reproducible Orca WearOS problem without sensitive data
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Include the expected behavior and steps to reproduce.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App and Orca host versions
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Watch and network
+      description: Share device model and connection type, not host addresses or pairing links.

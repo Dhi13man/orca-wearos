@@ -1,0 +1,2 @@
+pluginManagement { repositories { gradlePluginPortal(); mavenCentral() } }
+rootProject.name = 'expo-wear-data-layer-native-tests'

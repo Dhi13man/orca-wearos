@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.library'
+    id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.orcawear'
+version = '0.1.0'
+
+def contractPackage = providers.exec {
+    workingDir projectDir
+    commandLine 'node', '--print', "require.resolve('@orca/wear-companion-contract/package.json')"
+}.standardOutput.asText.get().trim()
+
+android {
+    namespace 'expo.modules.orcawear'
+    defaultConfig {
+        versionCode 1
+        versionName '0.1.0'
+    }
+    sourceSets.main.java.srcDir 'src/expo/java'
+    sourceSets.main.java.srcDir new File(new File(contractPackage).parentFile, 'android/src/main/kotlin')
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-android'
+    implementation 'com.google.android.gms:play-services-wearable:19.0.0'
+    implementation platform('com.google.firebase:firebase-bom:34.19.0')
+    implementation 'com.google.firebase:firebase-messaging'
+}

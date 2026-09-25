@@ -1,0 +1,2 @@
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+rootProject.name = 'orca-wear-native-acceptance'

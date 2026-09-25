@@ -1,0 +1,248 @@
+[
+  {
+    "name": "openConversation",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"openConversation\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "requestPhoneHandoff",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"requestPhoneHandoff\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "renewConversation",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"renewConversation\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"leaseId\":\"lease\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "closeConversation",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"closeConversation\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"leaseId\":\"lease\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "readHostPage",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"readHostPage\",\"target\":{},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":null,\"targetSnapshotVersion\":null,\"payload\":{\"cursor\":null}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "readUsagePage",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"readUsagePage\",\"target\":{},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":null,\"targetSnapshotVersion\":null,\"payload\":{\"cursor\":null}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "readNotificationsPage",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"readNotificationsPage\",\"target\":{},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":null,\"targetSnapshotVersion\":null,\"payload\":{\"cursor\":null}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "refresh",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"refresh\",\"target\":{},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":null,\"targetSnapshotVersion\":null,\"payload\":{}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "readHostAgents",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"readHostAgents\",\"target\":{\"hostId\":\"host\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":null,\"targetSnapshotVersion\":null,\"payload\":{\"cursor\":\"cursor\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "unicode",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"héllo 🙂 你好\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "separators",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"a b c\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "slashes",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"/\\\\\\\"\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "controls",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"\\u0000\\b\\f\\n\\r\\t\\u001fX\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "nonblank-zero-width",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"​\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "nonblank-next-line",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "utf8-boundary",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "blank-js-trim",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"\\t\\n\\u000b\\f\\r                  　﻿\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "message-overflow",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂a\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "escaped-payload-overflow",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"X\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "lone-high",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"\\ud800\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "lone-low",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"\\udfff\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "expired-at-deadline",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 2000,
+    "accepted": false
+  },
+  {
+    "name": "id-byte-limit",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "id-byte-overflow",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"ééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "max-safe-revision",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":9007199254740991,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": true
+  },
+  {
+    "name": "bad-revision--1",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":-1,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "bad-revision-0.5",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":0.5,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "bad-revision-9007199254740992",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":9007199254740992,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "bad-revision-null",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":null,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "bad-revision-2",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":\"2\",\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "unknown-root",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"},\"rpc\":\"terminal.send\"}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "unknown-payload",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\",\"method\":\"terminal.send\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "missing-fence",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":null,\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "unknown-action",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"__proto__\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "duplicate-key",
+    "serialized": "{\"schemaVersion\":1,\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "leading-space",
+    "serialized": " {\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "alternate-escape",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"\\u0074ext\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "decimal-number",
+    "serialized": "{\"schemaVersion\":1,\"bindingId\":\"binding\",\"requestId\":\"request\",\"expiresAt\":2000,\"action\":\"sendAgentMessage\",\"target\":{\"hostId\":\"host\",\"workspaceId\":\"folder\",\"workspaceKind\":\"folder\",\"sessionTabId\":\"tab\"},\"publisherEpoch\":\"phone\",\"expectedRevision\":2.0,\"targetPublicationEpoch\":\"runtime\",\"targetSnapshotVersion\":3,\"payload\":{\"text\":\"text\"}}",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "array-root",
+    "serialized": "[]",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "null-root",
+    "serialized": "null",
+    "now": 1000,
+    "accepted": false
+  },
+  {
+    "name": "oversize",
+    "serialized": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "now": 1000,
+    "accepted": false
+  }
+]

@@ -1,0 +1,14 @@
+name: Feature request
+description: Propose one scoped improvement
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User need
+      description: Describe the problem and a concrete example.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior

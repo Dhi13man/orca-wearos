@@ -1,0 +1,12 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.2.20'
+}
+repositories { mavenCentral() }
+kotlin { jvmToolchain(17) }
+def sdk = System.getenv('ANDROID_HOME') ?: System.getenv('ANDROID_SDK_ROOT')
+dependencies {
+    compileOnly files("${sdk}/platforms/android-36/android.jar")
+    testImplementation 'org.json:json:20250517'
+    testImplementation 'junit:junit:4.13.2'
+}
+sourceSets.test.resources.srcDir '../conformance'
