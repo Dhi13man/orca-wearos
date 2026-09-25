@@ -23,13 +23,12 @@ is not changed by this project. The watch has no Tailscale client bundled here.
 - A network route from the watch to the host. Use a private LAN for `ws://`; use
   a correctly configured `wss://` endpoint for access beyond that LAN.
 
-## Build and pair
+## Install and pair
 
-The `0.0.1` GitHub release contains source only. Build a local APK using the
-instructions below before installing it on a watch. Android will reject an
-update if an installed app with the same package ID has a different signer;
-do not uninstall an existing app to work around that check. The source package
-ID is `com.stably.orca.wearos`.
+Download the signed APK from the [0.0.1 release](https://github.com/Dhi13man/orca-wearos/releases/tag/v0.0.1)
+and install it on the watch. The package ID is `com.stably.orca.wearos`, which
+installs beside earlier developer test builds. Android rejects an update signed
+by a different key; preserve an existing app and its data if that check fails.
 
 On the reachable Orca host, run:
 
