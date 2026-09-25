@@ -20,7 +20,7 @@
     "expo-modules-core": "55.0.25",
     "expo-secure-store": "55.0.13",
     "react": "19.2.6",
-    "react-native": "0.83.9",
+    "react-native": "0.87.1",
     "tweetnacl": "1.0.3"
   },
   "devDependencies": {
