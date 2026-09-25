@@ -27,6 +27,8 @@ is not changed by this project. The watch has no Tailscale client bundled here.
 
 Install the APK from the GitHub release on the watch. For a developer install,
 enable Wireless debugging on the watch and run `adb install -r <apk>`.
+The release package is `com.stably.orca.wearos`; it installs beside earlier
+developer test builds without replacing their data.
 
 On the reachable Orca host, run:
 

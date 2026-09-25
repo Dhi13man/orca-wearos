@@ -15,7 +15,7 @@
         "android.permission.SYSTEM_ALERT_WINDOW",
         "android.permission.WRITE_EXTERNAL_STORAGE"
       ],
-      "package": "com.stably.orca.mobile",
+      "package": "com.stably.orca.wearos",
       "usesCleartextTraffic": true,
       "versionCode": 1
     },
