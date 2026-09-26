@@ -1,3 +1,4 @@
+# Local outputs (including those left by checkouts before the module move).
 .expo/
 android/
 node_modules/
