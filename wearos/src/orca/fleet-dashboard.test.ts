@@ -7,16 +7,13 @@ import { refreshFleet } from './fleet-dashboard'
 import type { PairingOffer } from './pairing'
 import type { OrcaDashboard } from './runtime-dashboard'
 
-const pairings = Array.from(
-  { length: 5 },
-  (_, index): PairingOffer => ({
-    v: 2,
-    endpoint: `ws://host-${index}:6768`,
-    deviceToken: `token-${index}`,
-    publicKeyB64: 'key',
-    scope: 'wear'
-  })
-)
+const pairings = Array.from({ length: 5 }, (_, index): PairingOffer => ({
+  v: 2,
+  endpoint: `ws://host-${index}:6768`,
+  deviceToken: `token-${index}`,
+  publicKeyB64: 'key',
+  scope: 'wear'
+}))
 
 function dashboard(id: string): OrcaDashboard {
   return {
