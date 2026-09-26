@@ -8,7 +8,11 @@ import {
   type AgentSendOutcome
 } from '../orca/direct-orca-client'
 import type { PairingOffer } from '../orca/pairing'
-import type { WearAgentSession, WearConversationMessage } from '../orca/runtime-dashboard'
+import {
+  canReadAgentConversation,
+  type WearAgentSession,
+  type WearConversationMessage
+} from '../orca/runtime-dashboard'
 import {
   absentReplyCanExpire,
   clearPendingReply,
@@ -42,7 +46,7 @@ export function AgentConversation({
   const [outcome, setOutcome] = useState<AgentSendOutcome | null>(null)
   const [pending, setPending] = useState<PendingWearReply | null | undefined>(undefined)
   const commandLock = useRef(false)
-  const canRead = Boolean(available && agent.sessionId)
+  const canRead = canReadAgentConversation(agent, available)
   const canSend = Boolean(
     agent.sessionId &&
     available &&
@@ -160,21 +164,26 @@ export function AgentConversation({
       <View style={styles.header}>
         <WearButton accessibilityLabel="Back to agents" compact label="←" quiet onPress={onBack} />
         <View style={styles.headerCopy}>
-          <Text accessibilityRole="header" numberOfLines={2} style={styles.title}>
-            {agent.title}
+          <Text
+            accessibilityLabel={`${agent.agent} conversation in ${agent.worktreeLabel}`}
+            accessibilityRole="header"
+            numberOfLines={1}
+            style={styles.title}
+          >
+            {agent.agent}
           </Text>
-          <Text numberOfLines={2} style={styles.meta}>
-            {agent.agent} · {agent.state} · {agent.worktreeLabel}
+          <Text numberOfLines={1} style={styles.meta}>
+            {agent.worktreeLabel}
           </Text>
         </View>
       </View>
       {!available ? (
-        <Text style={styles.notice}>Host is unavailable; replies are disabled.</Text>
+        <Text style={styles.notice}>Host unavailable. Chat paused.</Text>
       ) : agent.execution !== 'local' ? (
         <Text accessibilityLiveRegion="polite" style={styles.notice}>
           {agent.execution === 'remote'
-            ? 'Remote replies are unavailable through this runtime.'
-            : 'Execution ownership is unverifiable; transcript and send are disabled.'}
+            ? 'Remote chat unavailable.'
+            : 'Session unverified. Chat paused.'}
         </Text>
       ) : !agent.sessionId ? (
         <Text style={styles.notice}>Waiting for this agent to publish a conversation.</Text>

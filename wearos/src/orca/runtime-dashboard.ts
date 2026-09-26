@@ -37,6 +37,13 @@ export type WearAgentSession = {
   snapshotVersion: number
 }
 
+export function canReadAgentConversation(
+  agent: Pick<WearAgentSession, 'execution' | 'sessionId'>,
+  available: boolean
+): boolean {
+  return Boolean(available && agent.sessionId && agent.execution === 'local')
+}
+
 export type WearConversationMessage = {
   id: string
   role: string
