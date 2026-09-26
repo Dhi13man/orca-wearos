@@ -16,7 +16,7 @@
     "@orca/expo-wear-data-layer": "file:packages/expo-wear-data-layer",
     "expo": "55.0.27",
     "expo-build-properties": "55.0.13",
-    "expo-crypto": "55.0.14",
+    "expo-crypto": "57.0.3",
     "expo-modules-core": "55.0.25",
     "expo-secure-store": "57.0.4",
     "react": "19.3.0",
