@@ -24,8 +24,8 @@ importers:
         specifier: 55.0.25
         version: 55.0.25(react-native@0.83.9(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)
       expo-secure-store:
-        specifier: 55.0.13
-        version: 55.0.13(expo@55.0.27)
+        specifier: 57.0.4
+        version: 57.0.4(expo@55.0.27)
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -1810,8 +1810,8 @@ packages:
       react-native-worklets:
         optional: true
 
-  expo-secure-store@55.0.13:
-    resolution: {integrity: sha512-I6r0JNO1Fd4o0Gu7Ixiic7s89lqgdUHq17uBH9y1f/AntoyKn71TdtYJH82RgfsBbu5qNVzrwImmvlANyOlITQ==}
+  expo-secure-store@57.0.4:
+    resolution: {integrity: sha512-7zBA1RThURTXdP4w65kBzZNbcSsfArqVd+p+ETAnPRWXO8J296Qd0YaCVyRpJ0HSwlCnGdvOnqO+NgSreHsOhA==}
     peerDependencies:
       expo: '*'
 
@@ -5055,7 +5055,7 @@ snapshots:
       react: 19.3.0
       react-native: 0.83.9(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0)
 
-  expo-secure-store@55.0.13(expo@55.0.27):
+  expo-secure-store@57.0.4(expo@55.0.27):
     dependencies:
       expo: 55.0.27(@babel/core@7.29.7)(@expo/dom-webview@55.0.6)(react-native@0.83.9(@babel/core@7.29.7)(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(typescript@6.0.3)
 
