@@ -19,12 +19,12 @@
     "expo-crypto": "55.0.14",
     "expo-modules-core": "55.0.25",
     "expo-secure-store": "55.0.13",
-    "react": "19.2.6",
+    "react": "19.3.0",
     "react-native": "0.83.9",
     "tweetnacl": "1.0.3"
   },
   "devDependencies": {
-    "@types/react": "19.2.14",
+    "@types/react": "19.3.0",
     "oxfmt": "0.52.0",
     "oxlint": "1.85.0",
     "typescript": "6.0.3",
