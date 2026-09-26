@@ -35,6 +35,19 @@ jobs:
       - run: pnpm lint
       - run: pnpm format:check
       - run: pnpm test
+      - name: Install Android SDK platform 37
+        run: |
+          set -euo pipefail
+          : "${ANDROID_HOME:?ANDROID_HOME must be set on the runner}"
+          SDKMANAGER="${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$SDKMANAGER" ]; then
+            SDKMANAGER="$(ls -d ${ANDROID_HOME}/cmdline-tools/*/bin/sdkmanager 2>/dev/null | head -1)"
+          fi
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+          # Package id is android-37.0 (not android-37); symlink so compileSdk 37 / jvm-tests resolve android-37.
+          "$SDKMANAGER" "platforms;android-37.0" "build-tools;37.0.0"
+          ln -sfn "$ANDROID_HOME/platforms/android-37.0" "$ANDROID_HOME/platforms/android-37"
+        working-directory: .
       - run: pnpm exec expo prebuild --platform android --no-install
       - run: bash android/gradlew -p packages/expo-wear-data-layer/jvm-tests test
       - run: bash gradlew :app:assembleRelease -PreactNativeArchitectures=armeabi-v7a

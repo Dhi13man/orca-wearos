@@ -22,15 +22,21 @@
     "plugins": [
       "./plugins/with-wear-manifest.js",
       "./plugins/with-wear-firebase.js",
-      ["@orca/expo-wear-data-layer", { "role": "watch" }],
+      [
+        "@orca/expo-wear-data-layer",
+        {
+          "role": "watch"
+        }
+      ],
       [
         "expo-build-properties",
         {
           "android": {
-            "compileSdkVersion": 36,
+            "compileSdkVersion": 37,
             "minSdkVersion": 33,
             "targetSdkVersion": 36,
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": true,
+            "kotlinVersion": "2.2.0"
           }
         }
       ],

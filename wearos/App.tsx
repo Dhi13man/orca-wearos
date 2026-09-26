@@ -8,7 +8,8 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  View
+  View,
+  type ScrollViewInstance
 } from 'react-native'
 import { AgentConversation } from './src/command-center/agent-conversation'
 import { RuntimeDashboard } from './src/command-center/runtime-dashboard'
@@ -35,7 +36,7 @@ export default function App() {
   const [manualCode, setManualCode] = useState('')
   const [usePairingLink, setUsePairingLink] = useState(false)
   const [hosts, setHosts] = useState<FleetHost[]>([])
-  const scrollRef = useRef<ScrollView>(null)
+  const scrollRef = useRef<ScrollViewInstance>(null)
   const hostsRef = useRef<FleetHost[]>([])
   const refreshGeneration = useRef(0)
   const usageFollowups = useRef(0)
