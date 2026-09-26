@@ -10,6 +10,21 @@ watch-to-agent acceptance test.
  · [Install and pair](#install-and-pair) · [Build](#build-from-source)
  · [Security](SECURITY.md)
 
+## Watch preview
+
+These screens were captured on a Wear OS emulator with sample agent data. They
+show the watch UI; a live host-to-agent reply is still unverified.
+
+| Attention | Agent |
+| --- | --- |
+| ![Attention dashboard showing one agent needing attention](docs/screenshots/attention.png) | ![Orca Watch agent card showing a waiting Codex agent](docs/screenshots/agent.png) |
+
+| Conversation | Reply |
+| --- | --- |
+| ![Watch conversation with the Codex agent](docs/screenshots/conversation.png) | ![Reply from the watch shown in the conversation](docs/screenshots/reply.png) |
+
+![Watch reply receipt screen](docs/screenshots/receipt.png)
+
 ## Preview status
 
 - **Watch8 install and pairing:** The signed `0.0.1` APK installed, paired to a
@@ -26,10 +41,9 @@ watch-to-agent acceptance test.
 - **Usage and alerts:** Missing usage was labeled unavailable. Firebase push
   is not configured; periodic refresh cannot promise timely screen-off alerts.
 
-There is no screenshot of a working watch conversation because that flow has
-not been proved. The earlier gallery of mostly unavailable states has been
-removed. Current source also contains a more compact watch dashboard than the
-already-published `0.0.1` APK; a new signed build has not been released.
+The gallery shows the current-source UI with sample data, not a live agent
+acceptance test. Current source also contains a more compact watch dashboard
+than the already-published `0.0.1` APK; a new signed build has not been released.
 
 ## How it connects
 
