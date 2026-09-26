@@ -4,9 +4,6 @@ updates:
     directory: /wearos
     schedule:
       interval: monthly
-    ignore:
-      - dependency-name: "react-native"
-        versions: [">=0.84.0"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
