@@ -44,7 +44,9 @@ jobs:
             SDKMANAGER="$(ls -d ${ANDROID_HOME}/cmdline-tools/*/bin/sdkmanager 2>/dev/null | head -1)"
           fi
           yes | "$SDKMANAGER" --licenses >/dev/null || true
-          "$SDKMANAGER" "platforms;android-37" "build-tools;37.0.0"
+          # Package id is android-37.0 (not android-37); symlink so compileSdk 37 / jvm-tests resolve android-37.
+          "$SDKMANAGER" "platforms;android-37.0" "build-tools;37.0.0"
+          ln -sfn "$ANDROID_HOME/platforms/android-37.0" "$ANDROID_HOME/platforms/android-37"
         working-directory: .
       - run: pnpm exec expo prebuild --platform android --no-install
       - run: bash android/gradlew -p packages/expo-wear-data-layer/jvm-tests test
