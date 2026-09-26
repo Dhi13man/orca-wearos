@@ -10,6 +10,9 @@ permissions: {}
 jobs:
   verify:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: wearos
     permissions:
       contents: read
     steps:
@@ -35,4 +38,4 @@ jobs:
       - run: pnpm exec expo prebuild --platform android --no-install
       - run: bash android/gradlew -p packages/expo-wear-data-layer/jvm-tests test
       - run: bash gradlew :app:assembleRelease -PreactNativeArchitectures=armeabi-v7a
-        working-directory: android
+        working-directory: wearos/android

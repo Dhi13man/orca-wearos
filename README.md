@@ -1,7 +1,15 @@
-# Orca WearOS
+# Orca Watch
 
-A Wear OS companion that connects directly to an
+Watch companions for an
 [Orca](https://github.com/Dhi13man/orca) desktop host.
+
+## Repository layout
+
+The current Wear OS Expo app is self-contained in [wearos/](wearos/), including
+its source, native packages, plugins, dependency lockfile, and build configuration.
+Run all app development commands from that directory. Root-level documentation,
+license, community files, and GitHub configuration apply to the repository.
+A future `watchos/` module can sit beside it; watchOS is not implemented.
 
 ## Status
 
@@ -25,7 +33,7 @@ is not changed by this project. The watch has no Tailscale client bundled here.
 
 ## Install and pair
 
-Download the signed APK from the [0.0.1 release](https://github.com/Dhi13man/orca-wearos/releases/tag/v0.0.1)
+Download the signed APK from the [0.0.1 release](https://github.com/Dhi13man/orca-watch/releases/tag/v0.0.1)
 and install it on the watch. The package ID is `com.stably.orca.wearos`, which
 installs beside earlier developer test builds. Android rejects an update signed
 by a different key; preserve an existing app and its data if that check fails.
@@ -47,20 +55,24 @@ grant; it does not receive desktop runtime credentials or arbitrary RPC access.
 Node 24, pnpm 10.24.0, JDK 17, and the Android SDK are required.
 
 ```sh
+cd wearos
 pnpm install --frozen-lockfile
 pnpm typecheck
 pnpm lint
 pnpm format:check
 pnpm test
 pnpm exec expo prebuild --platform android --no-install
+bash android/gradlew -p packages/expo-wear-data-layer/jvm-tests test
 cd android
 ./gradlew :app:assembleRelease -PreactNativeArchitectures=armeabi-v7a
 ```
 
 The default Gradle output is signed with Android's standard **debug key**. It is
 for local testing and must not be published as a trusted release. Release APKs
-need a separate private signing key. The generated `android/` directory and
-`google-services.json` are ignored by Git.
+need a separate private signing key kept outside the repository. The generated
+`wearos/android/` directory and `google-services.json` are ignored by Git.
+On Windows, use `android\gradlew.bat` for the native tests and `gradlew.bat`
+for the release build in place of the shell wrapper commands above.
 
 ## Current limits
 
