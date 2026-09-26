@@ -21,6 +21,7 @@
     },
     "plugins": [
       "./plugins/with-wear-manifest.js",
+      "./plugins/with-gradle-wrapper.js",
       "./plugins/with-wear-firebase.js",
       ["@orca/expo-wear-data-layer", { "role": "watch" }],
       [
