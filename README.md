@@ -29,8 +29,7 @@ access, and timely screen-off alerts remain unverified. See
 
 ```mermaid
 flowchart LR
-    W[Wear OS watch] -->|direct network connection| H[Orca desktop host]
-    H -->|Wear-scoped data and replies| W
+    W[Wear OS watch] <-->|direct Wear-scoped connection| H[Orca desktop host]
     P[Original Android phone app] -.->|unchanged; not a relay| W
 ```
 
