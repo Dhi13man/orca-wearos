@@ -23,17 +23,24 @@ export function RuntimeDashboard({
   onOpenAgent: (host: FleetHost, agent: WearAgentSession) => void
   onRefresh: () => void
 }) {
-  const attention = hosts.flatMap((host) =>
-    (host.dashboard?.agents ?? [])
-      .filter((agent) => agent.state === 'blocked' || agent.state === 'waiting')
-      .map((agent) => ({ host, agent }))
+  const agents = hosts.flatMap((host) =>
+    (host.dashboard?.agents ?? []).map((agent) => ({ host, agent }))
   )
-  attention.sort(
+  agents.sort(
     (left, right) =>
-      Number(left.agent.state !== 'blocked') - Number(right.agent.state !== 'blocked') ||
+      Number(left.agent.state !== 'blocked' && left.agent.state !== 'waiting') -
+        Number(right.agent.state !== 'blocked' && right.agent.state !== 'waiting') ||
       (right.agent.updatedAt ?? 0) - (left.agent.updatedAt ?? 0)
   )
   const unavailableHosts = hosts.filter((host) => host.error || !host.dashboard).length
+  const cachedHosts = hosts.filter((host) => host.cached && !host.error).length
+  const allHostsUnverified = hosts.every((host) => host.error || !host.dashboard || host.cached)
+  const currentAgents = agents.filter(({ host }) => !host.error && !host.cached)
+  const needsAttention = currentAgents.filter(
+    ({ agent }) => agent.state === 'blocked' || agent.state === 'waiting'
+  ).length
+  const working = currentAgents.filter(({ agent }) => agent.state === 'working').length
+  const unverified = currentAgents.filter(({ agent }) => agent.state === 'unverifiable').length
   const recentEvents = hosts
     .flatMap((host) => (host.dashboard?.events ?? []).map((event) => ({ host, event })))
     .sort((left, right) => right.event.at - left.event.at)
@@ -46,49 +53,68 @@ export function RuntimeDashboard({
         <Text accessibilityRole="header" style={styles.title}>
           Attention
         </Text>
-        <Text style={styles.meta}>
-          {hosts.length} paired {hosts.length === 1 ? 'host' : 'hosts'} ·{' '}
-          {hosts.filter((host) => host.dashboard).length} with data
-        </Text>
-        {hosts.length > CACHED_HOST_LIMIT ? (
-          <Text style={styles.meta}>
-            Background cache covers {CACHED_HOST_LIMIT}; refresh to check all hosts.
-          </Text>
-        ) : null}
       </View>
-      {hosts.length === 0 ? <Text style={styles.empty}>Checking paired hosts…</Text> : null}
-      {attention.length ? (
-        attention.map(({ host, agent }) => (
+      <View style={styles.summary}>
+        <Text
+          accessibilityLabel={
+            allHostsUnverified
+              ? 'Agent count unavailable'
+              : `${needsAttention} agents need attention`
+          }
+          style={styles.summaryNumber}
+        >
+          {allHostsUnverified ? '—' : needsAttention}
+        </Text>
+        <View style={styles.summaryCopy}>
+          <Text numberOfLines={1} style={styles.summaryLabel}>
+            Need attention
+          </Text>
+          <Text numberOfLines={1} style={styles.summaryMeta}>
+            {!hosts.length
+              ? 'Checking hosts…'
+              : unavailableHosts
+                ? `${unavailableHosts} ${unavailableHosts === 1 ? 'host' : 'hosts'} unavailable`
+                : cachedHosts
+                  ? `${cachedHosts} ${cachedHosts === 1 ? 'host' : 'hosts'} refreshing`
+                  : unverified
+                    ? `${unverified} unverified`
+                    : `${working} working`}
+          </Text>
+        </View>
+      </View>
+      {hosts.length > CACHED_HOST_LIMIT ? (
+        <Text style={styles.empty}>
+          Background cache covers {CACHED_HOST_LIMIT} hosts; refresh for the full fleet.
+        </Text>
+      ) : null}
+      <SectionTitle label="Agents" />
+      {agents.length ? (
+        agents.map(({ host, agent }) => (
           <AgentCard
             agent={agent}
             host={host}
             key={`${host.pairing.endpoint}:${agent.id}`}
             onPress={() => onOpenAgent(host, agent)}
+            showHost={hosts.length > 1}
           />
         ))
-      ) : hosts.length ? (
+      ) : (
         <Text style={styles.empty}>
-          {unavailableHosts
-            ? `No known agent needs attention; ${unavailableHosts} host ${unavailableHosts === 1 ? 'inventory is' : 'inventories are'} unavailable.`
-            : 'No published agents need attention.'}
+          {unavailableHosts ? 'Agent inventory is unavailable.' : 'No agents published yet.'}
         </Text>
-      ) : null}
-      <SectionTitle label="Recent events" />
-      {recentEvents.length ? (
-        recentEvents.map(({ host, event }) => (
-          <View key={`${host.pairing.endpoint}:${event.key}`} style={styles.event}>
-            <Text style={styles.cardTitle}>
-              {event.kind === 'agent-task-complete' ? 'Agent task complete' : 'Terminal bell'}
-            </Text>
-            <Text style={styles.status}>
-              {pairingEndpointLabel(host.pairing.endpoint)} · {formatAge(event.at)}
-              {host.error || host.cached ? ' · stale' : ''}
-            </Text>
-          </View>
-        ))
-      ) : hosts.length ? (
-        <Text style={styles.empty}>No recent host events.</Text>
-      ) : null}
+      )}
+      {recentEvents.length ? <SectionTitle label="Recent events" /> : null}
+      {recentEvents.map(({ host, event }) => (
+        <View key={`${host.pairing.endpoint}:${event.key}`} style={styles.event}>
+          <Text style={styles.cardTitle}>
+            {event.kind === 'agent-task-complete' ? 'Agent task complete' : 'Terminal bell'}
+          </Text>
+          <Text style={styles.status}>
+            {pairingEndpointLabel(host.pairing.endpoint)} · {formatAge(event.at)}
+            {host.error || host.cached ? ' · stale' : ''}
+          </Text>
+        </View>
+      ))}
       {hosts.reduce((total, host) => total + (host.dashboard?.eventsOmitted ?? 0), 0) > 0 ? (
         <Text style={styles.empty}>Older host events are omitted.</Text>
       ) : null}
@@ -96,30 +122,12 @@ export function RuntimeDashboard({
       {hosts.map((host) => (
         <HostStatus host={host} key={host.pairing.endpoint} />
       ))}
-      <SectionTitle label="Agents" />
-      {hosts.map((host) => (
-        <View key={host.pairing.endpoint} style={styles.group}>
-          <Text style={styles.hostLabel}>{pairingEndpointLabel(host.pairing.endpoint)}</Text>
-          {host.dashboard?.agents.length ? (
-            host.dashboard.agents.map((agent) => (
-              <AgentCard
-                agent={agent}
-                host={host}
-                key={agent.id}
-                onPress={() => onOpenAgent(host, agent)}
-              />
-            ))
-          ) : (
-            <Text style={styles.empty}>
-              {host.error ? 'Agent inventory unavailable' : 'No published agent sessions'}
-            </Text>
-          )}
-        </View>
-      ))}
       <SectionTitle label="Usage" />
       {hosts.map((host) => (
         <View key={host.pairing.endpoint} style={styles.group}>
-          <Text style={styles.hostLabel}>{pairingEndpointLabel(host.pairing.endpoint)}</Text>
+          {hosts.length > 1 ? (
+            <Text style={styles.hostLabel}>{pairingEndpointLabel(host.pairing.endpoint)}</Text>
+          ) : null}
           {host.dashboard?.usage.length ? (
             host.dashboard.usage.map((usage) => (
               <UsageCard
@@ -232,13 +240,21 @@ function UsageLine({ label, window }: { label: string; window: WearUsageWindow |
 function AgentCard({
   agent,
   host,
-  onPress
+  onPress,
+  showHost
 }: {
   agent: WearAgentSession
   host: FleetHost
   onPress: () => void
+  showHost: boolean
 }) {
   const source = pairingEndpointLabel(host.pairing.endpoint)
+  const state =
+    host.error || host.cached
+      ? 'Stale'
+      : agent.state === 'unverifiable'
+        ? 'Unverified'
+        : agent.state
   return (
     <Pressable
       accessibilityHint={
@@ -253,16 +269,19 @@ function AgentCard({
       style={({ pressed }) => [styles.agentCard, pressed && styles.pressed]}
     >
       <Text numberOfLines={1} style={styles.agentTitle}>
-        {agent.title}
+        {agent.worktreeLabel}
       </Text>
-      <View style={styles.agentMeta}>
-        <Text numberOfLines={1} style={styles.meta}>
-          {source} · {agent.agent}
+      <Text
+        numberOfLines={1}
+        style={[styles.agentDetail, agent.state === 'blocked' && styles.error]}
+      >
+        {agent.agent} · {state}
+      </Text>
+      {showHost ? (
+        <Text numberOfLines={1} style={styles.agentHost}>
+          {source}
         </Text>
-        <Text style={[styles.agentState, agent.state === 'blocked' && styles.error]}>
-          {host.error || host.cached ? 'stale' : agent.state}
-        </Text>
-      </View>
+      ) : null}
     </Pressable>
   )
 }
@@ -273,9 +292,28 @@ function formatAge(timestamp: number): string {
 }
 
 const styles = StyleSheet.create({
-  header: { width: '100%', alignItems: 'center', marginBottom: 10 },
+  header: { width: '100%', alignItems: 'center', marginBottom: 12 },
   eyebrow: { color: wearColors.muted, fontSize: 10, fontWeight: '600', letterSpacing: 1.4 },
-  title: { marginTop: 2, color: wearColors.text, fontSize: 20, fontWeight: '600' },
+  title: { marginTop: 2, color: wearColors.text, fontSize: 22, fontWeight: '600' },
+  summary: {
+    width: '100%',
+    minHeight: 72,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    borderRadius: 18,
+    backgroundColor: wearColors.raised
+  },
+  summaryNumber: {
+    width: 32,
+    flexShrink: 0,
+    color: wearColors.text,
+    fontSize: 30,
+    fontWeight: '600'
+  },
+  summaryCopy: { flex: 1, minWidth: 0, paddingLeft: 6 },
+  summaryLabel: { color: wearColors.text, fontSize: 12, fontWeight: '600' },
+  summaryMeta: { marginTop: 4, color: wearColors.secondary, fontSize: 10 },
   hostStatus: {
     width: '100%',
     marginTop: 8,
@@ -311,21 +349,21 @@ const styles = StyleSheet.create({
   },
   agentCard: {
     width: '100%',
-    minHeight: 64,
-    marginTop: 6,
+    minHeight: 72,
+    marginTop: 8,
     justifyContent: 'center',
     paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 24,
+    paddingVertical: 12,
+    borderRadius: 18,
     backgroundColor: wearColors.raised
   },
   pressed: { opacity: 0.82 },
   cardTitle: { color: wearColors.text, fontSize: 13, fontWeight: '600' },
   cardText: { marginTop: 5, color: wearColors.secondary, fontSize: 11, lineHeight: 15 },
   usageHeader: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between' },
-  agentTitle: { color: wearColors.text, fontSize: 13, fontWeight: '600' },
-  agentMeta: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  agentState: { color: wearColors.secondary, fontSize: 10, textTransform: 'uppercase' },
+  agentTitle: { color: wearColors.text, fontSize: 14, fontWeight: '600' },
+  agentDetail: { marginTop: 6, color: wearColors.muted, fontSize: 11 },
+  agentHost: { marginTop: 3, color: wearColors.muted, fontSize: 10 },
   meta: { marginTop: 4, color: wearColors.muted, fontSize: 10 },
   empty: { width: '100%', marginTop: 6, color: wearColors.muted, fontSize: 12, textAlign: 'left' }
 })

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import {
+  canReadAgentConversation,
   parseAttentionEvents,
   parseAgentInventory,
   parseNativeChatMessages,
@@ -7,6 +8,22 @@ import {
 } from './runtime-dashboard'
 
 describe('runtime dashboard projections', () => {
+  it('does not read a transcript without a verified local owner', () => {
+    expect(canReadAgentConversation({ execution: 'local', sessionId: 'session-a' }, true)).toBe(
+      true
+    )
+    expect(
+      canReadAgentConversation({ execution: 'unverifiable', sessionId: 'session-a' }, true)
+    ).toBe(false)
+    expect(canReadAgentConversation({ execution: 'remote', sessionId: 'session-a' }, true)).toBe(
+      false
+    )
+    expect(canReadAgentConversation({ execution: 'local', sessionId: null }, true)).toBe(false)
+    expect(canReadAgentConversation({ execution: 'local', sessionId: 'session-a' }, false)).toBe(
+      false
+    )
+  })
+
   it('keeps only bounded redacted host events', () => {
     expect(
       parseAttentionEvents({
