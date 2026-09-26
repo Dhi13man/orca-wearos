@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import {
   ActivityIndicator,
   AppState,
@@ -35,7 +35,7 @@ export default function App() {
   const [manualCode, setManualCode] = useState('')
   const [usePairingLink, setUsePairingLink] = useState(false)
   const [hosts, setHosts] = useState<FleetHost[]>([])
-  const scrollRef = useRef<ScrollView>(null)
+  const scrollRef = useRef<React.ElementRef<typeof ScrollView>>(null)
   const hostsRef = useRef<FleetHost[]>([])
   const refreshGeneration = useRef(0)
   const usageFollowups = useRef(0)
